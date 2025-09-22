@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Quiz VMware vSphere</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <div id="startScreen">
+    <h1>Quiz VMware vSphere</h1>
+    <p>Veuillez entrer votre <strong>nom de famille</strong> pour commencer :</p>
+    <input type="text" id="lastname" placeholder="Nom de famille" />
+    <br><br>
+    <button id="startBtn">Commencer le quiz</button>
+    <button class="alt" id="adminBtn">Mode Admin</button>
+  </div>
+  <div id="quizScreen" class="hidden">
+    <h2 id="quizTitle"></h2>
+    <div id="questionsContainer"></div>
+    <div id="navBtns">
+      <button id="prevBtn" class="alt hidden">Précédent</button>
+      <button id="nextBtn" class="alt">Suivant</button>
+      <button id="checkBtn" class="hidden">Vérifier mes réponses</button>
+      <button class="alt" id="resetBtn">Réinitialiser</button>
+      <button class="alt" id="adminBtnQuiz">Admin</button>
+    </div>
+    <div id="resultArea" class="hidden">
+      <h3>Résultat :</h3>
+      <div id="summary"></div>
+      <button id="restartBtn" class="alt">Recommencer</button>
+    </div>
+  </div>
+  <div id="adminScreen" class="hidden">
+    <h2>Espace Admin</h2>
+    <p>Résultats enregistrés :</p>
+    <table id="resultsTable">
+      <thead><tr><th>Nom</th><th>Score</th><th>%</th><th>Temps (s)</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <button class="alt" onclick="exitAdmin()">Quitter Admin</button>
+  </div>
+</div>
+
+<script src="QCM Vmware.js"></script>
+</body>
+</html>
